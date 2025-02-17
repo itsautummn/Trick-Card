@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://ds4a2dulilhme"
+path="res://.godot/imported/three_heart.aseprite-3515acf951e413f1b3a505534f370697.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Hearts/three_heart.aseprite"
+dest_files=["res://.godot/imported/three_heart.aseprite-3515acf951e413f1b3a505534f370697.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

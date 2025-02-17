@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://bexmlvui7nqk3"
+path="res://.godot/imported/five_heart.aseprite-49400339c66980a89938f3dc59f9a5af.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Hearts/five_heart.aseprite"
+dest_files=["res://.godot/imported/five_heart.aseprite-49400339c66980a89938f3dc59f9a5af.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

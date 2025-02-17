@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://cystxsxhbfsut"
+path="res://.godot/imported/red_back.aseprite-effa831ca565c878498b19f91445f338.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Backs/red_back.aseprite"
+dest_files=["res://.godot/imported/red_back.aseprite-effa831ca565c878498b19f91445f338.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

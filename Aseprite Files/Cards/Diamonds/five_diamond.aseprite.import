@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://cub2kb7witgcr"
+path="res://.godot/imported/five_diamond.aseprite-386b89e368283392cb562a4b5a239e99.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Diamonds/five_diamond.aseprite"
+dest_files=["res://.godot/imported/five_diamond.aseprite-386b89e368283392cb562a4b5a239e99.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

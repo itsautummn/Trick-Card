@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://cf2mhgv1ewn0b"
+path="res://.godot/imported/jack_diamond.aseprite-cca448e9c419fea5663099b7db5b8d25.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Diamonds/jack_diamond.aseprite"
+dest_files=["res://.godot/imported/jack_diamond.aseprite-cca448e9c419fea5663099b7db5b8d25.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

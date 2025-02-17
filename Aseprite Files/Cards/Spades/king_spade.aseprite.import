@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://c4jxnxwamsur5"
+path="res://.godot/imported/king_spade.aseprite-516ae08af13c744cfb63941595d7fc9a.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Spades/king_spade.aseprite"
+dest_files=["res://.godot/imported/king_spade.aseprite-516ae08af13c744cfb63941595d7fc9a.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

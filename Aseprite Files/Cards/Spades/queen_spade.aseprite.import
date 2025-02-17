@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://8nh14ai2apou"
+path="res://.godot/imported/queen_spade.aseprite-6420ce5f097aacc67ae987a9587838b0.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Spades/queen_spade.aseprite"
+dest_files=["res://.godot/imported/queen_spade.aseprite-6420ce5f097aacc67ae987a9587838b0.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

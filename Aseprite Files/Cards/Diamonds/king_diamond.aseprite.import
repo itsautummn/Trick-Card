@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://d0gqfvaj48dog"
+path="res://.godot/imported/king_diamond.aseprite-bfbfe04000d634f191d8332f16d5549d.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Diamonds/king_diamond.aseprite"
+dest_files=["res://.godot/imported/king_diamond.aseprite-bfbfe04000d634f191d8332f16d5549d.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

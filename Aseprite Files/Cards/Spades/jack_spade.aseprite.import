@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://dm2r12el5xh82"
+path="res://.godot/imported/jack_spade.aseprite-181b51cdce94085f338ae4a2ade78b56.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Spades/jack_spade.aseprite"
+dest_files=["res://.godot/imported/jack_spade.aseprite-181b51cdce94085f338ae4a2ade78b56.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

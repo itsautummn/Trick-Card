@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://be700w45iy0tm"
+path="res://.godot/imported/five_spade.aseprite-2e27f90f317b4cf82db5d1a159f5045e.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Spades/five_spade.aseprite"
+dest_files=["res://.godot/imported/five_spade.aseprite-2e27f90f317b4cf82db5d1a159f5045e.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

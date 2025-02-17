@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://c2ib1rybiciwh"
+path="res://.godot/imported/four_heart.aseprite-c6a79690d7d3756f33bb467123d232ff.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Hearts/four_heart.aseprite"
+dest_files=["res://.godot/imported/four_heart.aseprite-c6a79690d7d3756f33bb467123d232ff.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://dumdctchygs8i"
+path="res://.godot/imported/seven_heart.aseprite-8df51392cc4d8e20ad0eed25ad3c321f.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Hearts/seven_heart.aseprite"
+dest_files=["res://.godot/imported/seven_heart.aseprite-8df51392cc4d8e20ad0eed25ad3c321f.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

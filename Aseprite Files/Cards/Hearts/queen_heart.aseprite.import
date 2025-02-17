@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://0wvsjk5t7ani"
+path="res://.godot/imported/queen_heart.aseprite-5642f79d5121261c8b3697aafe372186.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Hearts/queen_heart.aseprite"
+dest_files=["res://.godot/imported/queen_heart.aseprite-5642f79d5121261c8b3697aafe372186.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

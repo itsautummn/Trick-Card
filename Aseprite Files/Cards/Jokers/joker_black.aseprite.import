@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://ead0ym4q6hpy"
+path="res://.godot/imported/joker_black.aseprite-d640ae960e9c57b82af29bfb59204c45.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Jokers/joker_black.aseprite"
+dest_files=["res://.godot/imported/joker_black.aseprite-d640ae960e9c57b82af29bfb59204c45.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

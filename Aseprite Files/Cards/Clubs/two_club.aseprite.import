@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://e1m5b2k28a6h"
+path="res://.godot/imported/two_club.aseprite-f960b9ef6da47d9b0a424545e29cb483.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Clubs/two_club.aseprite"
+dest_files=["res://.godot/imported/two_club.aseprite-f960b9ef6da47d9b0a424545e29cb483.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

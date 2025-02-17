@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://dgng5hjih8hqi"
+path="res://.godot/imported/eight_club.aseprite-3e2c2170c3609527f9dcb6ff165ce2a4.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Clubs/eight_club.aseprite"
+dest_files=["res://.godot/imported/eight_club.aseprite-3e2c2170c3609527f9dcb6ff165ce2a4.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

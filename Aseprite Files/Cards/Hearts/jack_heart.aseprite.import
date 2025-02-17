@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://bvf5841adurcj"
+path="res://.godot/imported/jack_heart.aseprite-8386f86e23bba9cc1f20a2a48c93abaf.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Hearts/jack_heart.aseprite"
+dest_files=["res://.godot/imported/jack_heart.aseprite-8386f86e23bba9cc1f20a2a48c93abaf.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

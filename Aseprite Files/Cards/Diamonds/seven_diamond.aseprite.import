@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://d3ksvmk4ty58r"
+path="res://.godot/imported/seven_diamond.aseprite-467454d5dcc5714431852cf1fb38cfc8.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Diamonds/seven_diamond.aseprite"
+dest_files=["res://.godot/imported/seven_diamond.aseprite-467454d5dcc5714431852cf1fb38cfc8.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

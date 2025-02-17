@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://cpdclytlauj1i"
+path="res://.godot/imported/four_diamond.aseprite-e3a68fb4b5c7b6f1d7b3fa36e097dd72.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Diamonds/four_diamond.aseprite"
+dest_files=["res://.godot/imported/four_diamond.aseprite-e3a68fb4b5c7b6f1d7b3fa36e097dd72.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxtv0g30hhgb0"]
+
+[ext_resource type="Script" path="res://Scripts/card.gd" id="1_la43a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1g080"]
+size = Vector2(20, 32)
+
+[node name="Card" type="Area2D"]
+script = ExtResource("1_la43a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1g080")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

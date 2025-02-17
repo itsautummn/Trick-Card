@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://c7ucx6sx5da5q"
+path="res://.godot/imported/ace_diamond.aseprite-c8c74cbb97eaa6a2972df3a53851cbcf.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Diamonds/ace_diamond.aseprite"
+dest_files=["res://.godot/imported/ace_diamond.aseprite-c8c74cbb97eaa6a2972df3a53851cbcf.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

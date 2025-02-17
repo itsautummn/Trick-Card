@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://bochunmwvvl7n"
+path="res://.godot/imported/queen_diamond.aseprite-38fb5d15c8e2517bd7711cbde150cf3f.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Diamonds/queen_diamond.aseprite"
+dest_files=["res://.godot/imported/queen_diamond.aseprite-38fb5d15c8e2517bd7711cbde150cf3f.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

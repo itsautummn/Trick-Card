@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://doixssen10b1e"
+path="res://.godot/imported/nine_diamond.aseprite-4470d013d405c888dcb70d87ebcf8bcf.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Diamonds/nine_diamond.aseprite"
+dest_files=["res://.godot/imported/nine_diamond.aseprite-4470d013d405c888dcb70d87ebcf8bcf.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

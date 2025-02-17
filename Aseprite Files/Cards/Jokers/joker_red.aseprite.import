@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://ml78rkwn18jb"
+path="res://.godot/imported/joker_red.aseprite-2c4399472eb439cbe121dacf8fe30d06.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Jokers/joker_red.aseprite"
+dest_files=["res://.godot/imported/joker_red.aseprite-2c4399472eb439cbe121dacf8fe30d06.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

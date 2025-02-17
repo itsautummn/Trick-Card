@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://b27doxn28klku"
+path="res://.godot/imported/two_heart.aseprite-63f07bd4fdfc5e34172e76115d2de23f.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Hearts/two_heart.aseprite"
+dest_files=["res://.godot/imported/two_heart.aseprite-63f07bd4fdfc5e34172e76115d2de23f.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

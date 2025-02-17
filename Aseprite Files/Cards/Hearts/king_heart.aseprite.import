@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://bqai8agbimh78"
+path="res://.godot/imported/king_heart.aseprite-001a4f2e40c8ac8d1d56df0aa15d617e.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Hearts/king_heart.aseprite"
+dest_files=["res://.godot/imported/king_heart.aseprite-001a4f2e40c8ac8d1d56df0aa15d617e.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

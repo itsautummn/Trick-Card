@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://cwbqvs58ykhpl"
+path="res://.godot/imported/two_spade.aseprite-7bf2376d492a9ca79a7970b070c6cd35.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Spades/two_spade.aseprite"
+dest_files=["res://.godot/imported/two_spade.aseprite-7bf2376d492a9ca79a7970b070c6cd35.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://dgwmyirv2srsx"
+path="res://.godot/imported/eight_spade.aseprite-8c496c50c87ec7fab7295e4e71ae451c.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Spades/eight_spade.aseprite"
+dest_files=["res://.godot/imported/eight_spade.aseprite-8c496c50c87ec7fab7295e4e71ae451c.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

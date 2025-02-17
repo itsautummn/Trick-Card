@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://covva3fsy5rki"
+path="res://.godot/imported/two_diamond.aseprite-0e832186c9e5b287b6cc8cadbe8ea5c2.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Diamonds/two_diamond.aseprite"
+dest_files=["res://.godot/imported/two_diamond.aseprite-0e832186c9e5b287b6cc8cadbe8ea5c2.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

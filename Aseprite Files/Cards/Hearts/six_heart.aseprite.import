@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://bc8o4wb0s8g1h"
+path="res://.godot/imported/six_heart.aseprite-ef6875912679fb4c1e33a5972cd2a702.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Hearts/six_heart.aseprite"
+dest_files=["res://.godot/imported/six_heart.aseprite-ef6875912679fb4c1e33a5972cd2a702.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

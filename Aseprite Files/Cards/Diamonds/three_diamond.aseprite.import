@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://blilplb5xtt3p"
+path="res://.godot/imported/three_diamond.aseprite-7df8a56f6aa76e1b8cc03e47867157c8.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Diamonds/three_diamond.aseprite"
+dest_files=["res://.godot/imported/three_diamond.aseprite-7df8a56f6aa76e1b8cc03e47867157c8.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

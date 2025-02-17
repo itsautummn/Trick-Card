@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://bvap47i0x66ei"
+path="res://.godot/imported/eight_heart.aseprite-9fc42ef245f65a1d7e3f2fc1f9e8405f.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Hearts/eight_heart.aseprite"
+dest_files=["res://.godot/imported/eight_heart.aseprite-9fc42ef245f65a1d7e3f2fc1f9e8405f.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

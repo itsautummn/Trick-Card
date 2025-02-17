@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://d3x3cncheci64"
+path="res://.godot/imported/eight_diamond.aseprite-e0ffcd142fc1a18fa1793bd90b308167.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Diamonds/eight_diamond.aseprite"
+dest_files=["res://.godot/imported/eight_diamond.aseprite-e0ffcd142fc1a18fa1793bd90b308167.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

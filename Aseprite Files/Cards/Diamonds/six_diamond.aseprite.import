@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://dkiodqsweawb0"
+path="res://.godot/imported/six_diamond.aseprite-220ba2f575375cb5f84f379172193785.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Cards/Diamonds/six_diamond.aseprite"
+dest_files=["res://.godot/imported/six_diamond.aseprite-220ba2f575375cb5f84f379172193785.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false
