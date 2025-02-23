@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://7rvr343uv52j"
+path="res://.godot/imported/slider_grabber.aseprite-4f46d27977638b117289339b41449172.res"
+
+[deps]
+
+source_file="res://Aseprite Files/slider_grabber.aseprite"
+dest_files=["res://.godot/imported/slider_grabber.aseprite-4f46d27977638b117289339b41449172.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

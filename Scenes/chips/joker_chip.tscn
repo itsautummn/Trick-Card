@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0wgnfv6lb76f"]
+
+[ext_resource type="Script" path="res://Scripts/chip.gd" id="1_eoo6l"]
+[ext_resource type="Texture2D" uid="uid://cdonb02523ocx" path="res://Aseprite Files/Chips/joker_chip.aseprite" id="1_vuc3f"]
+[ext_resource type="Script" path="res://Scripts/Effects/change_joker_effect.gd" id="3_xr4hj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_682pl"]
+radius = 9.0
+
+[node name="Joker Chip" type="Node2D"]
+script = ExtResource("1_eoo6l")
+chip_name = "Joker"
+cost = 10
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_682pl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vuc3f")
+
+[node name="Effect" type="Node2D" parent="."]
+script = ExtResource("3_xr4hj")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

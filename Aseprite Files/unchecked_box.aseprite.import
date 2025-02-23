@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://blcx28p8qa5hq"
+path="res://.godot/imported/unchecked_box.aseprite-a2c18e4e8064b30ad650921251d88fcf.res"
+
+[deps]
+
+source_file="res://Aseprite Files/unchecked_box.aseprite"
+dest_files=["res://.godot/imported/unchecked_box.aseprite-a2c18e4e8064b30ad650921251d88fcf.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

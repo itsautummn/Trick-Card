@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://bpydyisgd0lyn"
+path="res://.godot/imported/how_to_play_hover.aseprite-9281f114812a1caa09137adaedbe81e5.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Menu Buttons/how_to_play_hover.aseprite"
+dest_files=["res://.godot/imported/how_to_play_hover.aseprite-9281f114812a1caa09137adaedbe81e5.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

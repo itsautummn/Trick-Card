@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://bkkdiq6oco62n"
+path="res://.godot/imported/money_chip.aseprite-1284d9612a761c1aba080996b58334d5.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Chips/money_chip.aseprite"
+dest_files=["res://.godot/imported/money_chip.aseprite-1284d9612a761c1aba080996b58334d5.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

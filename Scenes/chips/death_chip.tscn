@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctctjrsco8hp1"]
+
+[ext_resource type="Script" path="res://Scripts/chip.gd" id="1_ue2f5"]
+[ext_resource type="Texture2D" uid="uid://buqcdbg5o0mob" path="res://Aseprite Files/Chips/death_chip.aseprite" id="1_vwixy"]
+[ext_resource type="Script" path="res://Scripts/Effects/death_chip_effect.gd" id="3_ytrpv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dmtbq"]
+radius = 9.0
+
+[node name="Death Chip" type="Node2D"]
+script = ExtResource("1_ue2f5")
+chip_name = "Death"
+cost = 30
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dmtbq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vwixy")
+
+[node name="Effect" type="Node2D" parent="."]
+script = ExtResource("3_ytrpv")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

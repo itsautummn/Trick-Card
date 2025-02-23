@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://5jme7nhm7ihh"]
+
+[ext_resource type="Script" path="res://Scripts/chip.gd" id="1_8eoyi"]
+[ext_resource type="Texture2D" uid="uid://da1kkw3c6fdqs" path="res://Aseprite Files/Chips/rank_chip.aseprite" id="1_c5xyn"]
+[ext_resource type="Script" path="res://Scripts/Effects/check_rank_effect.gd" id="3_sos6d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_28e20"]
+radius = 9.05539
+
+[node name="Rank Chip" type="Node2D"]
+script = ExtResource("1_8eoyi")
+chip_name = "Rank"
+cost = 35
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_28e20")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_c5xyn")
+
+[node name="Effect" type="Node2D" parent="."]
+script = ExtResource("3_sos6d")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

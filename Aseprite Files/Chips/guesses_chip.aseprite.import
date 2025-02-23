@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://clv3bwwu11qaj"
+path="res://.godot/imported/guesses_chip.aseprite-7df24b93c18eacf67551b9868fc22109.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Chips/guesses_chip.aseprite"
+dest_files=["res://.godot/imported/guesses_chip.aseprite-7df24b93c18eacf67551b9868fc22109.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

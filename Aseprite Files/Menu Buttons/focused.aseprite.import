@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://ce73aw8dtwewb"
+path="res://.godot/imported/focused.aseprite-15233a451aa7d61ea108cd95797b1a53.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Menu Buttons/focused.aseprite"
+dest_files=["res://.godot/imported/focused.aseprite-15233a451aa7d61ea108cd95797b1a53.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

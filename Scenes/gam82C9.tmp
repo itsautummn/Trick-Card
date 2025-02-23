@@ -1,0 +1,447 @@
+[gd_scene load_steps=26 format=3 uid="uid://bfldo7d4lo0ki"]
+
+[ext_resource type="Script" path="res://New/Scripts/game.gd" id="1_ehyd8"]
+[ext_resource type="Texture2D" uid="uid://bc7q03hbk6ib4" path="res://Aseprite Files/background.aseprite" id="2_ht4et"]
+[ext_resource type="Script" path="res://New/Scripts/card_controller.gd" id="2_lcky5"]
+[ext_resource type="Script" path="res://New/Scripts/sound_controller.gd" id="3_bkjpi"]
+[ext_resource type="PackedScene" uid="uid://1bjslxt2hu88" path="res://New/Scenes/hand.tscn" id="3_qmbhv"]
+[ext_resource type="PackedScene" uid="uid://xa12kt24qbpu" path="res://New/Scenes/deck.tscn" id="4_a7jij"]
+[ext_resource type="PackedScene" uid="uid://bb3gmgh18pyix" path="res://New/Scenes/discard.tscn" id="5_psx8w"]
+[ext_resource type="Script" path="res://New/Scripts/effects.gd" id="7_a870f"]
+[ext_resource type="Script" path="res://New/Scripts/shop.gd" id="8_5nn3w"]
+[ext_resource type="LabelSettings" uid="uid://munwrg2x61d0" path="res://Fonts/default_font.tres" id="8_tf2pt"]
+[ext_resource type="Script" path="res://New/Scripts/chip_spot.gd" id="12_t7vdd"]
+[ext_resource type="Texture2D" uid="uid://ywlg575j010u" path="res://Aseprite Files/case.aseprite" id="12_urk8w"]
+[ext_resource type="LabelSettings" uid="uid://ct6d8lnnwwrco" path="res://Fonts/large_font.tres" id="12_w67cv"]
+[ext_resource type="Script" path="res://New/Scripts/game_over.gd" id="13_1dph2"]
+[ext_resource type="Texture2D" uid="uid://78drygc7yk4f" path="res://Aseprite Files/game_over.aseprite" id="14_21ehv"]
+[ext_resource type="Texture2D" uid="uid://sm8xd13wvqij" path="res://Aseprite Files/Game Over Screen/restart.aseprite" id="15_nbjd7"]
+[ext_resource type="Texture2D" uid="uid://b3l6ldtsbkjle" path="res://Aseprite Files/Game Over Screen/restart_pressed.aseprite" id="16_e1h7g"]
+[ext_resource type="Texture2D" uid="uid://dfgwxd7p7weem" path="res://Aseprite Files/Game Over Screen/restart_hover.aseprite" id="17_3dsl0"]
+[ext_resource type="Texture2D" uid="uid://ce73aw8dtwewb" path="res://Aseprite Files/Game Over Screen/focused.aseprite" id="18_gfk7x"]
+[ext_resource type="Texture2D" uid="uid://camlls24nsqfx" path="res://Aseprite Files/Game Over Screen/quit.aseprite" id="19_x4rve"]
+[ext_resource type="Texture2D" uid="uid://4gwdwlajf54f" path="res://Aseprite Files/Game Over Screen/quit_pressed.aseprite" id="20_0xheg"]
+[ext_resource type="Texture2D" uid="uid://3b5y6rnpxood" path="res://Aseprite Files/Game Over Screen/quit_hover.aseprite" id="21_gqi7j"]
+
+[sub_resource type="Animation" id="Animation_rvd0w"]
+resource_name = "message"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 1.9, 2),
+"transitions": PackedFloat32Array(0.420448, 1, 1.1, 4.2001),
+"update": 0,
+"values": [Vector2(144, 180), Vector2(136, 104), Vector2(136, 80), Vector2(136, -16)]
+}
+
+[sub_resource type="Animation" id="Animation_cmib4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(144, 180)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cjie8"]
+_data = {
+"RESET": SubResource("Animation_cmib4"),
+"message": SubResource("Animation_rvd0w")
+}
+
+[node name="Game" type="Node2D" node_paths=PackedStringArray("card_controller", "sound_controller", "canvas_layer")]
+position = Vector2(160, -96)
+script = ExtResource("1_ehyd8")
+card_controller = NodePath("Card Controller")
+sound_controller = NodePath("Sound Controller")
+canvas_layer = NodePath("CanvasLayer")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_ht4et")
+
+[node name="Card Controller" type="Node2D" parent="." node_paths=PackedStringArray("hand_label")]
+script = ExtResource("2_lcky5")
+hand_label = NodePath("Labels/Hand Type")
+
+[node name="Hand" parent="Card Controller" node_paths=PackedStringArray("hand_label") instance=ExtResource("3_qmbhv")]
+hand_label = NodePath("../Labels/Hand Type")
+
+[node name="Deck" parent="Card Controller" instance=ExtResource("4_a7jij")]
+position = Vector2(89, 22)
+rotation = -0.423306
+
+[node name="Discard" parent="Card Controller" instance=ExtResource("5_psx8w")]
+position = Vector2(-87, 21)
+rotation = 0.410376
+
+[node name="Effects" type="Node2D" parent="Card Controller"]
+script = ExtResource("7_a870f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Card Controller/Effects"]
+offset_left = 136.0
+offset_top = -85.0
+offset_right = 154.0
+offset_bottom = -45.0
+
+[node name="Buttons" type="Node2D" parent="Card Controller"]
+
+[node name="Play Button" type="TextureButton" parent="Card Controller/Buttons"]
+offset_left = 14.0
+offset_top = 30.0
+offset_right = 36.0
+offset_bottom = 60.0
+
+[node name="Guess Button" type="TextureButton" parent="Card Controller/Buttons"]
+offset_left = -36.0
+offset_top = 30.0
+offset_right = -14.0
+offset_bottom = 60.0
+
+[node name="Labels" type="Node2D" parent="Card Controller"]
+
+[node name="Guesses" type="Label" parent="Card Controller/Labels"]
+offset_left = -39.0
+offset_top = -71.0
+offset_right = -11.0
+offset_bottom = -50.0
+rotation = -0.0782249
+text = "Guesses
+Left: 3"
+label_settings = ExtResource("8_tf2pt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hand Type" type="Label" parent="Card Controller/Labels"]
+offset_left = 1.0
+offset_top = -59.0
+offset_right = 31.0
+offset_bottom = -38.0
+rotation = 0.0646497
+label_settings = ExtResource("8_tf2pt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Shop Button" type="TextureButton" parent="."]
+offset_left = -160.0
+offset_top = -83.0
+offset_right = -66.0
+offset_bottom = -15.0
+
+[node name="Sound Controller" type="Node2D" parent="."]
+process_mode = 3
+script = ExtResource("3_bkjpi")
+
+[node name="Game Music" type="AudioStreamPlayer2D" parent="Sound Controller"]
+
+[node name="Shop Music" type="AudioStreamPlayer2D" parent="Sound Controller"]
+
+[node name="Game Over Music" type="AudioStreamPlayer2D" parent="Sound Controller"]
+
+[node name="Ambience" type="AudioStreamPlayer2D" parent="Sound Controller"]
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="Sound Controller"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Shop" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+script = ExtResource("8_5nn3w")
+
+[node name="Background" type="Control" parent="CanvasLayer/Shop"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Shop/Background"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("12_urk8w")
+
+[node name="Chip Spots" type="Control" parent="CanvasLayer/Shop"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+
+[node name="Chip spot 1" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 1.325
+anchor_top = 3.4
+anchor_right = 1.325
+anchor_bottom = 3.4
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "White"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Chip spot 2" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 1.925
+anchor_top = 3.4
+anchor_right = 1.925
+anchor_bottom = 3.4
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "Red"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Chip spot 3" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 2.525
+anchor_top = 3.4
+anchor_right = 2.525
+anchor_bottom = 3.4
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "Brown"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Chip spot 4" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 3.1
+anchor_top = 3.4
+anchor_right = 3.1
+anchor_bottom = 3.4
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "Green"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Chip spot 5" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 4.85
+anchor_top = 3.4
+anchor_right = 4.85
+anchor_bottom = 3.4
+offset_left = -1.52588e-05
+offset_right = -1.52588e-05
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "Black"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Chip spot 6" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 5.425
+anchor_top = 3.4
+anchor_right = 5.425
+anchor_bottom = 3.4
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "Purple"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Chip spot 7" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 6.025
+anchor_top = 3.4
+anchor_right = 6.025
+anchor_bottom = 3.4
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "Yellow"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Chip spot 8" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 6.625
+anchor_top = 3.4
+anchor_right = 6.625
+anchor_bottom = 3.4
+offset_left = -3.05176e-05
+offset_right = -3.05176e-05
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "Orange"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Labels" type="Control" parent="CanvasLayer/Shop"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+
+[node name="Money Label" type="Label" parent="CanvasLayer/Shop/Labels"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.075
+anchor_top = 0.875
+anchor_right = 1.375
+anchor_bottom = 1.2
+mouse_filter = 1
+text = "$0"
+label_settings = ExtResource("12_w67cv")
+
+[node name="Buttons" type="Control" parent="CanvasLayer/Shop"]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 31.0
+offset_bottom = 33.0
+mouse_filter = 1
+
+[node name="Close" type="TextureButton" parent="CanvasLayer/Shop/Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.806
+anchor_top = 1.03
+anchor_right = 5.516
+anchor_bottom = 2.03
+offset_left = 0.0139923
+offset_top = 0.00999832
+offset_right = 0.0039978
+offset_bottom = 0.00999451
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Game Over" type="Control" parent="CanvasLayer"]
+process_mode = 2
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("13_1dph2")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Game Over"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_21ehv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Game Over"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Restart" type="TextureButton" parent="CanvasLayer/Game Over/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("15_nbjd7")
+texture_pressed = ExtResource("16_e1h7g")
+texture_hover = ExtResource("17_3dsl0")
+texture_focused = ExtResource("18_gfk7x")
+
+[node name="Quit" type="TextureButton" parent="CanvasLayer/Game Over/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("19_x4rve")
+texture_pressed = ExtResource("20_0xheg")
+texture_hover = ExtResource("21_gqi7j")
+texture_focused = ExtResource("18_gfk7x")
+
+[node name="Message" type="Control" parent="CanvasLayer"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = 90.0
+offset_right = 24.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Message"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Must only guess one card!"
+label_settings = ExtResource("12_w67cv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Message/Label"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.741176)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Message"]
+libraries = {
+"": SubResource("AnimationLibrary_cjie8")
+}
+
+[connection signal="money_updated" from="." to="CanvasLayer/Shop" method="_on_game_money_updated"]
+[connection signal="earn_money" from="Card Controller" to="." method="update_money"]
+[connection signal="game_error" from="Card Controller" to="." method="game_error"]
+[connection signal="game_lost" from="Card Controller" to="." method="game_lost"]
+[connection signal="game_saved" from="Card Controller" to="." method="game_saved"]
+[connection signal="game_won" from="Card Controller" to="." method="game_won"]
+[connection signal="play_sfx" from="Card Controller" to="." method="play_sfx"]
+[connection signal="play_sfx" from="Card Controller/Hand" to="." method="play_sfx"]
+[connection signal="pressed" from="Card Controller/Buttons/Play Button" to="Card Controller" method="play_hand"]
+[connection signal="pressed" from="Card Controller/Buttons/Guess Button" to="Card Controller" method="guess_card"]
+[connection signal="pressed" from="Shop Button" to="CanvasLayer/Shop" method="_on_open_pressed"]
+[connection signal="chip_bought" from="CanvasLayer/Shop" to="." method="_on_chip_bought"]
+[connection signal="pressed" from="CanvasLayer/Shop/Buttons/Close" to="CanvasLayer/Shop" method="_on_close_pressed"]
+[connection signal="pressed" from="CanvasLayer/Game Over/VBoxContainer/Restart" to="." method="restart_game"]
+[connection signal="pressed" from="CanvasLayer/Game Over/VBoxContainer/Quit" to="." method="quit_game"]

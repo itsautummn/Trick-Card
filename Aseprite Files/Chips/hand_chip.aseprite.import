@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://bethbbplakpay"
+path="res://.godot/imported/hand_chip.aseprite-0f3f4fc752aa2d48d7b1f4ff7ed6b130.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Chips/hand_chip.aseprite"
+dest_files=["res://.godot/imported/hand_chip.aseprite-0f3f4fc752aa2d48d7b1f4ff7ed6b130.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

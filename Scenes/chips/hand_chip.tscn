@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://nghu63o2xb84"]
+
+[ext_resource type="Script" path="res://Scripts/chip.gd" id="1_lngwd"]
+[ext_resource type="Texture2D" uid="uid://bethbbplakpay" path="res://Aseprite Files/Chips/hand_chip.aseprite" id="1_s5l1g"]
+[ext_resource type="Script" path="res://Scripts/Effects/hand_chip_effect.gd" id="3_ivi8n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x631v"]
+radius = 9.0
+
+[node name="Hand Chip" type="Node2D"]
+script = ExtResource("1_lngwd")
+chip_name = "Hand"
+cost = 50
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_x631v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_s5l1g")
+
+[node name="Effect" type="Node2D" parent="."]
+script = ExtResource("3_ivi8n")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

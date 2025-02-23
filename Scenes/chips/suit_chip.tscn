@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwljbbejy2i3u"]
+
+[ext_resource type="Script" path="res://Scripts/chip.gd" id="1_bcvfn"]
+[ext_resource type="Texture2D" uid="uid://bwtuke6rel1ex" path="res://Aseprite Files/Chips/suit_chip.aseprite" id="1_vpo7f"]
+[ext_resource type="Script" path="res://Scripts/Effects/check_suit_effect.gd" id="3_0cy25"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bvo3h"]
+radius = 9.05539
+
+[node name="Suit Chip" type="Node2D"]
+script = ExtResource("1_bcvfn")
+chip_name = "Suit"
+cost = 45
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_bvo3h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vpo7f")
+
+[node name="Effect" type="Node2D" parent="."]
+script = ExtResource("3_0cy25")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://78drygc7yk4f"
+path="res://.godot/imported/game_over.aseprite-37f88531926a161fdfe5aa6ef6c18808.res"
+
+[deps]
+
+source_file="res://Aseprite Files/game_over.aseprite"
+dest_files=["res://.godot/imported/game_over.aseprite-37f88531926a161fdfe5aa6ef6c18808.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

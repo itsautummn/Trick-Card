@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://c01mmouuo2cqt"]
+
+[ext_resource type="Script" path="res://Scripts/chip.gd" id="1_ox5sn"]
+[ext_resource type="Texture2D" uid="uid://cuw6sr24oo2jq" path="res://Aseprite Files/Chips/change_rank_chip.aseprite" id="1_rch7s"]
+[ext_resource type="Script" path="res://Scripts/Effects/change_rank_effect.gd" id="3_67nt5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d7it8"]
+radius = 9.0
+
+[node name="Change Rank Chip" type="Node2D"]
+script = ExtResource("1_ox5sn")
+chip_name = "Change Rank"
+cost = 25
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_d7it8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rch7s")
+
+[node name="Effect" type="Node2D" parent="."]
+script = ExtResource("3_67nt5")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

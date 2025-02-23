@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://dkjdm6qxj5p2y"
+path="res://.godot/imported/close_hover.aseprite-02aec13efb2c6f3b3c40e028beb81f5d.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Menu Buttons/close_hover.aseprite"
+dest_files=["res://.godot/imported/close_hover.aseprite-02aec13efb2c6f3b3c40e028beb81f5d.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

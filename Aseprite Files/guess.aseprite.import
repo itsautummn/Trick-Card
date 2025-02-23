@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://nkubbsplukb3"
+path="res://.godot/imported/guess.aseprite-b55f22230c05dcec6f958f220ee60dcf.res"
+
+[deps]
+
+source_file="res://Aseprite Files/guess.aseprite"
+dest_files=["res://.godot/imported/guess.aseprite-b55f22230c05dcec6f958f220ee60dcf.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

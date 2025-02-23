@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://dfgwxd7p7weem"
+path="res://.godot/imported/restart_hover.aseprite-8a73b6431627ce274bdb4761844b159f.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Menu Buttons/restart_hover.aseprite"
+dest_files=["res://.godot/imported/restart_hover.aseprite-8a73b6431627ce274bdb4761844b159f.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://drbes71qvrk8s"
+path="res://.godot/imported/put_chip.aseprite-4fd220b255b1b244a178da997fcc4eb3.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Chips/put_chip.aseprite"
+dest_files=["res://.godot/imported/put_chip.aseprite-4fd220b255b1b244a178da997fcc4eb3.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

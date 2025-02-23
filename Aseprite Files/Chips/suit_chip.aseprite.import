@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://bwtuke6rel1ex"
+path="res://.godot/imported/suit_chip.aseprite-364558ea13aca53d6c006732652caa57.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Chips/suit_chip.aseprite"
+dest_files=["res://.godot/imported/suit_chip.aseprite-364558ea13aca53d6c006732652caa57.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://u78hwj6npwv2"
+path="res://.godot/imported/slider_tick.aseprite-38c75a9c50fabf59b2898a9ea9f1163f.res"
+
+[deps]
+
+source_file="res://Aseprite Files/slider_tick.aseprite"
+dest_files=["res://.godot/imported/slider_tick.aseprite-38c75a9c50fabf59b2898a9ea9f1163f.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

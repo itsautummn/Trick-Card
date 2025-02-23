@@ -1,0 +1,52 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://bsf4scg14mcvt"]
+
+[ext_resource type="Texture2D" uid="uid://7rvr343uv52j" path="res://Aseprite Files/slider_grabber.aseprite" id="1_2icfa"]
+[ext_resource type="Texture2D" uid="uid://c2p3movp6vpyb" path="res://Aseprite Files/checked_box.aseprite" id="1_ykare"]
+[ext_resource type="Texture2D" uid="uid://blcx28p8qa5hq" path="res://Aseprite Files/unchecked_box.aseprite" id="2_5r7w2"]
+[ext_resource type="Texture2D" uid="uid://u78hwj6npwv2" path="res://Aseprite Files/slider_tick.aseprite" id="2_fsudy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lc48c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s55lv"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.4)
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1y8jk"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bi1uj"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_detail = 6
+
+[resource]
+CheckButton/icons/checked = ExtResource("1_ykare")
+CheckButton/icons/checked_disabled = ExtResource("1_ykare")
+CheckButton/icons/checked_disabled_mirrored = ExtResource("1_ykare")
+CheckButton/icons/checked_mirrored = ExtResource("1_ykare")
+CheckButton/icons/unchecked = ExtResource("2_5r7w2")
+CheckButton/icons/unchecked_disabled = ExtResource("2_5r7w2")
+CheckButton/icons/unchecked_disabled_mirrored = ExtResource("2_5r7w2")
+CheckButton/icons/unchecked_mirrored = ExtResource("2_5r7w2")
+CheckButton/styles/focus = SubResource("StyleBoxFlat_lc48c")
+HSlider/constants/center_grabber = 0
+HSlider/constants/grabber_offset = 0
+HSlider/icons/grabber = ExtResource("1_2icfa")
+HSlider/icons/grabber_disabled = ExtResource("1_2icfa")
+HSlider/icons/grabber_highlight = ExtResource("1_2icfa")
+HSlider/icons/tick = ExtResource("2_fsudy")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_s55lv")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_1y8jk")
+HSlider/styles/slider = SubResource("StyleBoxFlat_bi1uj")

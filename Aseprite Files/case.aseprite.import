@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://ywlg575j010u"
+path="res://.godot/imported/case.aseprite-27cf2fd40f98fa6a578815284610ebc2.res"
+
+[deps]
+
+source_file="res://Aseprite Files/case.aseprite"
+dest_files=["res://.godot/imported/case.aseprite-27cf2fd40f98fa6a578815284610ebc2.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

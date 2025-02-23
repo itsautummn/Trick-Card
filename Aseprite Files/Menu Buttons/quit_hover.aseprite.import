@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://3b5y6rnpxood"
+path="res://.godot/imported/quit_hover.aseprite-3e3a5f007ff5a5412ad662d204c31380.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Menu Buttons/quit_hover.aseprite"
+dest_files=["res://.godot/imported/quit_hover.aseprite-3e3a5f007ff5a5412ad662d204c31380.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

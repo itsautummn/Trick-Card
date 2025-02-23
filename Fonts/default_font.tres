@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://munwrg2x61d0"]
+
+[ext_resource type="FontFile" uid="uid://b56eqjqi23v8f" path="res://Fonts/m3x6.ttf" id="1_xln7f"]
+
+[resource]
+line_spacing = -5.945
+font = ExtResource("1_xln7f")
+font_color = Color(0, 0, 0, 1)

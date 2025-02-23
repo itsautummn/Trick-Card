@@ -1,20 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://drrxq6cwkwd3i"]
+[gd_scene load_steps=4 format=3 uid="uid://xa12kt24qbpu"]
 
-[ext_resource type="Texture2D" uid="uid://cystxsxhbfsut" path="res://Aseprite Files/Cards/Backs/red_back.aseprite" id="1_xvdrp"]
-[ext_resource type="Script" path="res://Scripts/deck.gd" id="2_usvdl"]
+[ext_resource type="Script" path="res://Scripts/deck.gd" id="1_05tpj"]
+[ext_resource type="Texture2D" uid="uid://vkx3hto0yoxo" path="res://Aseprite Files/Cards/Backs/black_back.aseprite" id="2_fisef"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gg51b"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fti5b"]
 size = Vector2(20, 32)
 
-[node name="Deck" type="Area2D"]
-script = ExtResource("2_usvdl")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_xvdrp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_gg51b")
+[node name="Deck" type="Node2D"]
+script = ExtResource("1_05tpj")
 
 [node name="Cards" type="Node2D" parent="."]
 
-[connection signal="input_event" from="." to="." method="_on_input_event"]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_fti5b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fisef")

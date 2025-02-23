@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://dbaa35fw0ndtb"
+path="res://.godot/imported/close.aseprite-dc4f07c30f9d3de7c100f9b2e6e2563b.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Menu Buttons/close.aseprite"
+dest_files=["res://.godot/imported/close.aseprite-dc4f07c30f9d3de7c100f9b2e6e2563b.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

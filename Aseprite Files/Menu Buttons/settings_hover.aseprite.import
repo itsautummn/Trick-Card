@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://do3yhwx3n0fvq"
+path="res://.godot/imported/settings_hover.aseprite-a0da91807e8c334fbd77399d68f03cd1.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Menu Buttons/settings_hover.aseprite"
+dest_files=["res://.godot/imported/settings_hover.aseprite-a0da91807e8c334fbd77399d68f03cd1.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

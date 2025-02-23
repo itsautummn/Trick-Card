@@ -1,79 +1,57 @@
-extends Area2D
+extends Node2D
 
-@warning_ignore("integer_division")
+@onready var cards: Node2D = $Cards
 
-signal cards_drawn
+const MAX_CARDS: int = 54
 
-@export var hand: Node2D
-@export var back: Texture2D = Cards.deck_backs["Black"]
-@export var max_cards: int = 52
-
-var num_cards: int = max_cards
-var cards_in: Array[Area2D] = []
-var enabled: bool = true
-
-const card_scene = preload("res://Scenes/card.tscn")
+var cards_in: Array[Area2D]
+var back = Globals.Backs.RED
+var enabled: bool = false
 
 
 func _ready() -> void:
-	make_deck()
-	
+	$Sprite2D.texture = Globals.deck_backs[Globals.back_names[back]]
+
 
 func make_deck() -> void:
 	# Add each card as an instantiated child to the array
 	var card_instance: Area2D
-	for rank in Cards.Ranks.size():
-		for suit in Cards.Suits.size():
-			card_instance = card_scene.instantiate()
-			if rank == Cards.Ranks.JOKER: # Skip jokers and add later
+	for rank in Globals.Ranks.size():
+		for suit in Globals.Suits.size():
+			card_instance = Globals.card_scene.instantiate()
+			if rank == Globals.Ranks.JOKER: # Skip jokers and add later
 				continue
 			card_instance.rank = rank
 			card_instance.suit = suit
-			if suit == Cards.Suits.HEART or suit == Cards.Suits.DIAMOND:
-				card_instance.color = Cards.Colors.RED
+			if suit == Globals.Suits.HEART or suit == Globals.Suits.DIAMOND:
+				card_instance.color = Globals.Colors.RED
 			else:
-				card_instance.color = Cards.Colors.BLACK
+				card_instance.color = Globals.Colors.BLACK
 			card_instance.disable()
 			cards_in.append(card_instance)
 	for i in 2:
-		card_instance = card_scene.instantiate()
-		card_instance.rank = Cards.Ranks.JOKER
-		card_instance.color = Cards.Colors.BLACK if i else Cards.Colors.RED
+		card_instance = Globals.card_scene.instantiate()
+		card_instance.rank = Globals.Ranks.JOKER
+		card_instance.color = Globals.Colors.BLACK if i else Globals.Colors.RED
 		card_instance.disable()
 		cards_in.append(card_instance)
 	
 	# Shuffle the array to randomize the order, then add the children to the scene
 	cards_in.shuffle()
+	var non_joker_cards: Array[Area2D]
 	for card in cards_in:
-		$Cards.add_child(card)
-	
-	# Set the sprite of the deck
-	$Sprite2D.texture = back
-
-
-func draw_cards(amount: int) -> void:
-	var cards_being_drawn: Array[Area2D] = []
-	for n in amount:
-		if not enabled:
-			break
-		var card = cards_in.pop_back()
-		if cards_in.is_empty():
-			out_of_cards()
-		cards_being_drawn.append(card)
-		$Cards.remove_child(card)
-	cards_drawn.emit(cards_being_drawn)
+		if card.rank != Globals.Ranks.JOKER:
+			non_joker_cards.append(card)
+	var trick_index = randi_range(0, non_joker_cards.size() - 1)
+	non_joker_cards[trick_index].set_trick_card(true)
+	for card in cards_in:
+		cards.add_child(card)
 
 
 func out_of_cards() -> void:
 	if enabled:
 		disable()
-		$Sprite2D.texture = null
-
-
-func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if event.is_action_pressed("click") and enabled:
-		draw_cards(hand.hand_size)
-		disable()
+		visible = false
 
 
 func enable():
@@ -82,3 +60,7 @@ func enable():
 
 func disable():
 	enabled = false
+	
+
+func get_cards_in():
+	return cards_in

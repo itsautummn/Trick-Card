@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://da1kkw3c6fdqs"
+path="res://.godot/imported/rank_chip.aseprite-c50a7f1a5da3c4dca7e5a5361f4d2b52.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Chips/rank_chip.aseprite"
+dest_files=["res://.godot/imported/rank_chip.aseprite-c50a7f1a5da3c4dca7e5a5361f4d2b52.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

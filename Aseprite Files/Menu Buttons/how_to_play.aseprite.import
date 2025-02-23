@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://cgrlvic20qhi1"
+path="res://.godot/imported/how_to_play.aseprite-45b4102b67bff608e59fa59d4c522486.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Menu Buttons/how_to_play.aseprite"
+dest_files=["res://.godot/imported/how_to_play.aseprite-45b4102b67bff608e59fa59d4c522486.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://cdonb02523ocx"
+path="res://.godot/imported/joker_chip.aseprite-575a30cecf08a51a2808b6bf0c2467a5.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Chips/joker_chip.aseprite"
+dest_files=["res://.godot/imported/joker_chip.aseprite-575a30cecf08a51a2808b6bf0c2467a5.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

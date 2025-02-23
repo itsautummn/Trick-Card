@@ -1,0 +1,852 @@
+[gd_scene load_steps=51 format=3 uid="uid://bfldo7d4lo0ki"]
+
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_ehyd8"]
+[ext_resource type="Texture2D" uid="uid://bc7q03hbk6ib4" path="res://Aseprite Files/background.aseprite" id="2_ht4et"]
+[ext_resource type="Script" path="res://Scripts/card_controller.gd" id="2_lcky5"]
+[ext_resource type="Script" path="res://Scripts/sound_controller.gd" id="3_bkjpi"]
+[ext_resource type="PackedScene" uid="uid://1bjslxt2hu88" path="res://Scenes/hand.tscn" id="3_qmbhv"]
+[ext_resource type="PackedScene" uid="uid://xa12kt24qbpu" path="res://Scenes/deck.tscn" id="4_a7jij"]
+[ext_resource type="PackedScene" uid="uid://bb3gmgh18pyix" path="res://Scenes/discard.tscn" id="5_psx8w"]
+[ext_resource type="Script" path="res://Scripts/effects.gd" id="7_a870f"]
+[ext_resource type="Script" path="res://Scripts/shop.gd" id="8_5nn3w"]
+[ext_resource type="LabelSettings" uid="uid://munwrg2x61d0" path="res://Fonts/default_font.tres" id="8_tf2pt"]
+[ext_resource type="AudioStream" uid="uid://didcemnm37shn" path="res://Music/version_1.ogg" id="10_blyve"]
+[ext_resource type="AudioStream" uid="uid://cisthe2gx6pl3" path="res://Music/version_2.ogg" id="11_so7x3"]
+[ext_resource type="AudioStream" uid="uid://23iylx2lxgnn" path="res://Music/untitled yo mama.mp3" id="12_451uv"]
+[ext_resource type="Script" path="res://Scripts/chip_spot.gd" id="12_t7vdd"]
+[ext_resource type="Texture2D" uid="uid://ywlg575j010u" path="res://Aseprite Files/case.aseprite" id="12_urk8w"]
+[ext_resource type="LabelSettings" uid="uid://ct6d8lnnwwrco" path="res://Fonts/large_font.tres" id="12_w67cv"]
+[ext_resource type="Script" path="res://Scripts/game_over.gd" id="13_1dph2"]
+[ext_resource type="AudioStream" uid="uid://b8i54i154vh0m" path="res://SFX/poker_room.mp3" id="13_cark7"]
+[ext_resource type="Texture2D" uid="uid://78drygc7yk4f" path="res://Aseprite Files/game_over.aseprite" id="14_21ehv"]
+[ext_resource type="Texture2D" uid="uid://sm8xd13wvqij" path="res://Aseprite Files/Menu Buttons/restart.aseprite" id="15_nbjd7"]
+[ext_resource type="Texture2D" uid="uid://b3l6ldtsbkjle" path="res://Aseprite Files/Menu Buttons/restart_pressed.aseprite" id="16_e1h7g"]
+[ext_resource type="Texture2D" uid="uid://dfgwxd7p7weem" path="res://Aseprite Files/Menu Buttons/restart_hover.aseprite" id="17_3dsl0"]
+[ext_resource type="Texture2D" uid="uid://ce73aw8dtwewb" path="res://Aseprite Files/Menu Buttons/focused.aseprite" id="18_gfk7x"]
+[ext_resource type="Texture2D" uid="uid://camlls24nsqfx" path="res://Aseprite Files/Menu Buttons/quit.aseprite" id="19_x4rve"]
+[ext_resource type="Texture2D" uid="uid://4gwdwlajf54f" path="res://Aseprite Files/Menu Buttons/quit_pressed.aseprite" id="20_0xheg"]
+[ext_resource type="Texture2D" uid="uid://3b5y6rnpxood" path="res://Aseprite Files/Menu Buttons/quit_hover.aseprite" id="21_gqi7j"]
+[ext_resource type="Texture2D" uid="uid://dl3623u8xcpup" path="res://Aseprite Files/pause_menu.aseprite" id="26_3xpad"]
+[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="26_y0p8w"]
+[ext_resource type="Texture2D" uid="uid://ba86m5u067mmr" path="res://Aseprite Files/Menu Buttons/play.aseprite" id="27_fkies"]
+[ext_resource type="Texture2D" uid="uid://b44x66653yx4v" path="res://Aseprite Files/Menu Buttons/play_pressed.aseprite" id="28_4bmcf"]
+[ext_resource type="Texture2D" uid="uid://dt7syfm0ac1rb" path="res://Aseprite Files/Menu Buttons/play_hover.aseprite" id="29_uvvu5"]
+[ext_resource type="Texture2D" uid="uid://ckrg7urlwkrgx" path="res://Aseprite Files/Menu Buttons/settings.aseprite" id="31_qtm3i"]
+[ext_resource type="Texture2D" uid="uid://csh8qr13i81aw" path="res://Aseprite Files/Menu Buttons/settings_pressed.aseprite" id="32_2jbd0"]
+[ext_resource type="Texture2D" uid="uid://do3yhwx3n0fvq" path="res://Aseprite Files/Menu Buttons/settings_hover.aseprite" id="33_vsdt8"]
+[ext_resource type="Script" path="res://Scripts/settings_menu.gd" id="34_6vjdt"]
+[ext_resource type="Texture2D" uid="uid://bk052hyhidc4o" path="res://Aseprite Files/settings_menu.aseprite" id="35_1fbgc"]
+[ext_resource type="Texture2D" uid="uid://cgrlvic20qhi1" path="res://Aseprite Files/Menu Buttons/how_to_play.aseprite" id="35_2yw4j"]
+[ext_resource type="Script" path="res://Scripts/volume.gd" id="36_0r2eg"]
+[ext_resource type="Texture2D" uid="uid://dqe4pfnvr1io2" path="res://Aseprite Files/Menu Buttons/how_to_play_pressed.aseprite" id="36_xfvk0"]
+[ext_resource type="Texture2D" uid="uid://bpydyisgd0lyn" path="res://Aseprite Files/Menu Buttons/how_to_play_hover.aseprite" id="37_qd0i6"]
+[ext_resource type="Theme" uid="uid://bsf4scg14mcvt" path="res://ui_theme.tres" id="38_rm2rg"]
+[ext_resource type="Texture2D" uid="uid://dbaa35fw0ndtb" path="res://Aseprite Files/Menu Buttons/close.aseprite" id="39_1ff3n"]
+[ext_resource type="Texture2D" uid="uid://b20stekni08t3" path="res://Aseprite Files/fullscreen_icon.aseprite" id="39_1uc4r"]
+[ext_resource type="Texture2D" uid="uid://bjoefv1dn40jm" path="res://Aseprite Files/Menu Buttons/close_pressed.aseprite" id="40_yiffh"]
+[ext_resource type="Texture2D" uid="uid://dkjdm6qxj5p2y" path="res://Aseprite Files/Menu Buttons/close_hover.aseprite" id="41_cndnj"]
+[ext_resource type="Script" path="res://Scripts/intro_black_screen.gd" id="43_fw10n"]
+[ext_resource type="Texture2D" uid="uid://csjcf4x51tuuq" path="res://Aseprite Files/how_to_menu.aseprite" id="46_be3gg"]
+
+[sub_resource type="Animation" id="Animation_cmib4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(144, 180)]
+}
+
+[sub_resource type="Animation" id="Animation_rvd0w"]
+resource_name = "message"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 1.9, 2),
+"transitions": PackedFloat32Array(0.420448, 0.233258, 0.239401, 4.2001),
+"update": 0,
+"values": [Vector2(144, 180), Vector2(136, 104), Vector2(136, 80), Vector2(136, -16)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cjie8"]
+_data = {
+"RESET": SubResource("Animation_cmib4"),
+"message": SubResource("Animation_rvd0w")
+}
+
+[node name="Game" type="Node2D" node_paths=PackedStringArray("card_controller", "sound_controller", "canvas_layer")]
+position = Vector2(160, -96)
+script = ExtResource("1_ehyd8")
+card_controller = NodePath("Card Controller")
+sound_controller = NodePath("Sound Controller")
+canvas_layer = NodePath("CanvasLayer")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_ht4et")
+
+[node name="Card Controller" type="Node2D" parent="." node_paths=PackedStringArray("hand_label")]
+script = ExtResource("2_lcky5")
+hand_label = NodePath("Labels/Hand Type")
+
+[node name="Hand" parent="Card Controller" node_paths=PackedStringArray("hand_label") instance=ExtResource("3_qmbhv")]
+hand_label = NodePath("../Labels/Hand Type")
+
+[node name="Deck" parent="Card Controller" instance=ExtResource("4_a7jij")]
+position = Vector2(89, 22)
+rotation = -0.423306
+
+[node name="Discard" parent="Card Controller" instance=ExtResource("5_psx8w")]
+position = Vector2(-87, 21)
+rotation = 0.410376
+
+[node name="Effects" type="Node2D" parent="Card Controller"]
+script = ExtResource("7_a870f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Card Controller/Effects"]
+offset_left = 136.0
+offset_top = -85.0
+offset_right = 154.0
+offset_bottom = -45.0
+
+[node name="Buttons" type="Node2D" parent="Card Controller"]
+
+[node name="Play Button" type="TextureButton" parent="Card Controller/Buttons"]
+offset_left = 14.0
+offset_top = 30.0
+offset_right = 36.0
+offset_bottom = 60.0
+
+[node name="Guess Button" type="TextureButton" parent="Card Controller/Buttons"]
+offset_left = -36.0
+offset_top = 30.0
+offset_right = -14.0
+offset_bottom = 60.0
+
+[node name="Labels" type="Node2D" parent="Card Controller"]
+
+[node name="Guesses" type="Label" parent="Card Controller/Labels"]
+offset_left = -39.0
+offset_top = -71.0
+offset_right = -11.0
+offset_bottom = -50.0
+rotation = -0.0782249
+text = "Guesses
+Left: 3"
+label_settings = ExtResource("8_tf2pt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hand Type" type="Label" parent="Card Controller/Labels"]
+offset_left = 1.0
+offset_top = -59.0
+offset_right = 31.0
+offset_bottom = -38.0
+rotation = 0.0646497
+label_settings = ExtResource("8_tf2pt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Shop Button" type="TextureButton" parent="."]
+offset_left = -160.0
+offset_top = -83.0
+offset_right = -66.0
+offset_bottom = -15.0
+
+[node name="Sound Controller" type="Node2D" parent="."]
+process_mode = 3
+script = ExtResource("3_bkjpi")
+
+[node name="Game Music" type="AudioStreamPlayer2D" parent="Sound Controller"]
+process_mode = 1
+stream = ExtResource("10_blyve")
+autoplay = true
+bus = &"Music"
+
+[node name="Shop Music" type="AudioStreamPlayer2D" parent="Sound Controller"]
+process_mode = 1
+stream = ExtResource("11_so7x3")
+volume_db = -80.0
+autoplay = true
+bus = &"Music"
+
+[node name="Game Over Music" type="AudioStreamPlayer2D" parent="Sound Controller"]
+process_mode = 2
+stream = ExtResource("12_451uv")
+autoplay = true
+attenuation = 4.28709
+bus = &"Music"
+
+[node name="Ambience" type="AudioStreamPlayer2D" parent="Sound Controller"]
+stream = ExtResource("13_cark7")
+volume_db = -20.0
+autoplay = true
+bus = &"Ambience"
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="Sound Controller"]
+bus = &"SFX"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Shop" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("game")]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+script = ExtResource("8_5nn3w")
+game = NodePath("../..")
+
+[node name="Background" type="Control" parent="CanvasLayer/Shop"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Shop/Background"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("12_urk8w")
+
+[node name="Chip Spots" type="Control" parent="CanvasLayer/Shop"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+
+[node name="Chip spot 1" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 1.325
+anchor_top = 3.4
+anchor_right = 1.325
+anchor_bottom = 3.4
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "White"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Chip spot 2" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 1.925
+anchor_top = 3.4
+anchor_right = 1.925
+anchor_bottom = 3.4
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "Red"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Chip spot 3" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 2.525
+anchor_top = 3.4
+anchor_right = 2.525
+anchor_bottom = 3.4
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "Brown"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Chip spot 4" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 3.1
+anchor_top = 3.4
+anchor_right = 3.1
+anchor_bottom = 3.4
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "Green"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Chip spot 5" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 4.85
+anchor_top = 3.4
+anchor_right = 4.85
+anchor_bottom = 3.4
+offset_left = -1.52588e-05
+offset_right = -1.52588e-05
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "Black"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Chip spot 6" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 5.425
+anchor_top = 3.4
+anchor_right = 5.425
+anchor_bottom = 3.4
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "Purple"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Chip spot 7" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 6.025
+anchor_top = 3.4
+anchor_right = 6.025
+anchor_bottom = 3.4
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "Yellow"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Chip spot 8" type="Control" parent="CanvasLayer/Shop/Chip Spots" node_paths=PackedStringArray("game", "card_controller")]
+layout_mode = 1
+anchor_left = 6.625
+anchor_top = 3.4
+anchor_right = 6.625
+anchor_bottom = 3.4
+offset_left = -3.05176e-05
+offset_right = -3.05176e-05
+pivot_offset = Vector2(9, 9)
+mouse_filter = 1
+script = ExtResource("12_t7vdd")
+color = "Orange"
+game = NodePath("../../../..")
+card_controller = NodePath("../../../../Card Controller")
+
+[node name="Labels" type="Control" parent="CanvasLayer/Shop"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+
+[node name="Money Label" type="Label" parent="CanvasLayer/Shop/Labels"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.075
+anchor_top = 0.875
+anchor_right = 1.375
+anchor_bottom = 1.2
+mouse_filter = 1
+text = "$0"
+label_settings = ExtResource("12_w67cv")
+
+[node name="Buttons" type="Control" parent="CanvasLayer/Shop"]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 31.0
+offset_bottom = 33.0
+mouse_filter = 1
+
+[node name="Close" type="TextureButton" parent="CanvasLayer/Shop/Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.806
+anchor_top = 1.03
+anchor_right = 5.516
+anchor_bottom = 2.03
+offset_left = 0.0139923
+offset_top = 0.00999832
+offset_right = 0.0039978
+offset_bottom = 0.00999451
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Tooltips" type="Control" parent="CanvasLayer/Shop"]
+layout_mode = 1
+anchor_left = 1.45
+anchor_top = 0.8
+anchor_right = 6.5
+anchor_bottom = 2.175
+offset_right = -3.05176e-05
+mouse_filter = 2
+
+[node name="Cost" type="Label" parent="CanvasLayer/Shop/Tooltips"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.059
+anchor_top = 0.164
+anchor_right = 0.277
+anchor_bottom = 0.982
+offset_left = 0.0820007
+offset_top = -0.0200005
+offset_right = 0.0460052
+offset_bottom = -0.0100021
+label_settings = ExtResource("12_w67cv")
+horizontal_alignment = 1
+
+[node name="Effect" type="Label" parent="CanvasLayer/Shop/Tooltips"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.683
+anchor_top = 0.127
+anchor_right = 0.98
+anchor_bottom = 0.8
+offset_left = -10.966
+offset_top = -11.985
+offset_right = 11.04
+offset_bottom = 12.0
+label_settings = ExtResource("12_w67cv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Game Over" type="Control" parent="CanvasLayer"]
+process_mode = 2
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("13_1dph2")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Game Over"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 0.615686)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Game Over"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_21ehv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Game Over"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Game Over/VBoxContainer"]
+layout_mode = 2
+label_settings = ExtResource("12_w67cv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Restart" type="TextureButton" parent="CanvasLayer/Game Over/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("15_nbjd7")
+texture_pressed = ExtResource("16_e1h7g")
+texture_hover = ExtResource("17_3dsl0")
+texture_focused = ExtResource("18_gfk7x")
+
+[node name="Quit" type="TextureButton" parent="CanvasLayer/Game Over/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("19_x4rve")
+texture_pressed = ExtResource("20_0xheg")
+texture_hover = ExtResource("21_gqi7j")
+texture_focused = ExtResource("18_gfk7x")
+
+[node name="Message" type="Control" parent="CanvasLayer"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = 90.0
+offset_right = 24.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Message"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Must only guess one card!"
+label_settings = ExtResource("12_w67cv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Message/Label"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.741176)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Message"]
+libraries = {
+"": SubResource("AnimationLibrary_cjie8")
+}
+
+[node name="Pause Menu" type="Control" parent="CanvasLayer"]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("26_y0p8w")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Pause Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 0.615686)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Pause Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("26_3xpad")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Pause Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -32.0
+offset_right = 34.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="TextureButton" parent="CanvasLayer/Pause Menu/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("27_fkies")
+texture_pressed = ExtResource("28_4bmcf")
+texture_hover = ExtResource("29_uvvu5")
+texture_focused = ExtResource("18_gfk7x")
+
+[node name="Settings" type="TextureButton" parent="CanvasLayer/Pause Menu/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("31_qtm3i")
+texture_pressed = ExtResource("32_2jbd0")
+texture_hover = ExtResource("33_vsdt8")
+texture_focused = ExtResource("18_gfk7x")
+
+[node name="Restart" type="TextureButton" parent="CanvasLayer/Pause Menu/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("15_nbjd7")
+texture_pressed = ExtResource("16_e1h7g")
+texture_hover = ExtResource("17_3dsl0")
+texture_focused = ExtResource("18_gfk7x")
+
+[node name="Quit" type="TextureButton" parent="CanvasLayer/Pause Menu/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("19_x4rve")
+texture_pressed = ExtResource("20_0xheg")
+texture_hover = ExtResource("21_gqi7j")
+texture_focused = ExtResource("18_gfk7x")
+
+[node name="How To Play" type="TextureButton" parent="CanvasLayer/Pause Menu/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("35_2yw4j")
+texture_pressed = ExtResource("36_xfvk0")
+texture_hover = ExtResource("37_qd0i6")
+
+[node name="Settings Menu" type="Control" parent="CanvasLayer/Pause Menu"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("34_6vjdt")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Pause Menu/Settings Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("35_1fbgc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Pause Menu/Settings Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -27.0
+offset_right = 44.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Master Volume" type="HSlider" parent="CanvasLayer/Pause Menu/Settings Menu/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("38_rm2rg")
+max_value = 1.0
+step = 0.001
+script = ExtResource("36_0r2eg")
+bus_name = "Master"
+
+[node name="Master Label" type="Label" parent="CanvasLayer/Pause Menu/Settings Menu/VBoxContainer/Master Volume"]
+layout_mode = 2
+anchor_top = -0.265
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.88
+offset_bottom = 1.0
+theme = ExtResource("38_rm2rg")
+text = "Master Volume"
+label_settings = ExtResource("12_w67cv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Music Volume" type="HSlider" parent="CanvasLayer/Pause Menu/Settings Menu/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("38_rm2rg")
+max_value = 1.0
+step = 0.001
+script = ExtResource("36_0r2eg")
+bus_name = "Music"
+
+[node name="Music Label" type="Label" parent="CanvasLayer/Pause Menu/Settings Menu/VBoxContainer/Music Volume"]
+layout_mode = 2
+anchor_top = -0.5
+anchor_right = 1.0
+anchor_bottom = 1.125
+text = "Music Volume"
+label_settings = ExtResource("12_w67cv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ambience Volume" type="HSlider" parent="CanvasLayer/Pause Menu/Settings Menu/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("38_rm2rg")
+max_value = 1.0
+step = 0.001
+script = ExtResource("36_0r2eg")
+bus_name = "Ambience"
+
+[node name="Ambience Label" type="Label" parent="CanvasLayer/Pause Menu/Settings Menu/VBoxContainer/Ambience Volume"]
+layout_mode = 2
+anchor_top = -0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 1.0
+text = "Ambience Volume"
+label_settings = ExtResource("12_w67cv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFX Volume" type="HSlider" parent="CanvasLayer/Pause Menu/Settings Menu/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("38_rm2rg")
+max_value = 1.0
+step = 0.001
+script = ExtResource("36_0r2eg")
+bus_name = "SFX"
+
+[node name="SFX Label" type="Label" parent="CanvasLayer/Pause Menu/Settings Menu/VBoxContainer/SFX Volume"]
+layout_mode = 2
+anchor_top = -0.5
+anchor_right = 1.0
+anchor_bottom = 1.125
+text = "SFX Volume"
+label_settings = ExtResource("12_w67cv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fullscreen" type="CheckButton" parent="CanvasLayer/Pause Menu/Settings Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("38_rm2rg")
+button_pressed = true
+icon = ExtResource("39_1uc4r")
+
+[node name="Close" type="TextureButton" parent="CanvasLayer/Pause Menu/Settings Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+texture_normal = ExtResource("39_1ff3n")
+texture_pressed = ExtResource("40_yiffh")
+texture_hover = ExtResource("41_cndnj")
+texture_focused = ExtResource("18_gfk7x")
+
+[node name="How To Menu" type="Control" parent="CanvasLayer/Pause Menu"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Pause Menu/How To Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("46_be3gg")
+
+[node name="Label" type="Label" parent="CanvasLayer/Pause Menu/How To Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.278
+anchor_right = 0.644
+anchor_bottom = 0.75
+offset_top = -0.0400047
+offset_right = -0.0800171
+offset_bottom = -1.52588e-05
+grow_horizontal = 2
+grow_vertical = 2
+text = "Like poker and old maid
+combined! Find the
+\"trick\" card by playing
+poker hands and using
+chips from the shop.
+You get three guesses,
+and you win by guessing
+correctly. 
+If you play the 
+trick card, you lose!"
+label_settings = ExtResource("8_tf2pt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close" type="TextureButton" parent="CanvasLayer/Pause Menu/How To Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.391
+anchor_top = 0.761
+anchor_right = 0.6
+anchor_bottom = 0.85
+offset_left = -0.12001
+offset_top = 0.019989
+size_flags_horizontal = 4
+mouse_filter = 1
+texture_normal = ExtResource("39_1ff3n")
+texture_pressed = ExtResource("40_yiffh")
+texture_hover = ExtResource("41_cndnj")
+texture_focused = ExtResource("18_gfk7x")
+
+[node name="Intro Black Screen" type="Control" parent="CanvasLayer"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("43_fw10n")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Intro Black Screen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Intro Black Screen"]
+wait_time = 0.1
+one_shot = true
+autostart = true
+
+[connection signal="money_updated" from="." to="CanvasLayer/Shop" method="_on_game_money_updated"]
+[connection signal="earn_money" from="Card Controller" to="." method="update_money"]
+[connection signal="game_error" from="Card Controller" to="." method="game_error"]
+[connection signal="game_lost" from="Card Controller" to="." method="game_lost"]
+[connection signal="game_saved" from="Card Controller" to="." method="game_saved"]
+[connection signal="game_won" from="Card Controller" to="." method="game_won"]
+[connection signal="play_sfx" from="Card Controller" to="." method="play_sfx"]
+[connection signal="play_sfx" from="Card Controller/Hand" to="." method="play_sfx"]
+[connection signal="pressed" from="Card Controller/Buttons/Play Button" to="Card Controller" method="play_hand"]
+[connection signal="pressed" from="Card Controller/Buttons/Guess Button" to="Card Controller" method="guess_card"]
+[connection signal="pressed" from="Shop Button" to="Sound Controller" method="_on_shop_opened"]
+[connection signal="pressed" from="Shop Button" to="CanvasLayer/Shop" method="_on_open_pressed"]
+[connection signal="chip_bought" from="CanvasLayer/Shop" to="." method="_on_chip_bought"]
+[connection signal="pressed" from="CanvasLayer/Shop/Buttons/Close" to="Sound Controller" method="_on_shop_closed"]
+[connection signal="pressed" from="CanvasLayer/Shop/Buttons/Close" to="CanvasLayer/Shop" method="_on_close_pressed"]
+[connection signal="pressed" from="CanvasLayer/Game Over/VBoxContainer/Restart" to="." method="restart_game"]
+[connection signal="pressed" from="CanvasLayer/Game Over/VBoxContainer/Quit" to="." method="quit_game"]
+[connection signal="pressed" from="CanvasLayer/Pause Menu/VBoxContainer/Play" to="CanvasLayer/Pause Menu" method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pause Menu/VBoxContainer/Settings" to="CanvasLayer/Pause Menu/Settings Menu" method="_on_settings_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pause Menu/VBoxContainer/Restart" to="." method="restart_game"]
+[connection signal="pressed" from="CanvasLayer/Pause Menu/VBoxContainer/Quit" to="." method="quit_game"]
+[connection signal="pressed" from="CanvasLayer/Pause Menu/VBoxContainer/How To Play" to="CanvasLayer/Pause Menu" method="_on_how_to_play_pressed"]
+[connection signal="toggled" from="CanvasLayer/Pause Menu/Settings Menu/VBoxContainer/Fullscreen" to="CanvasLayer/Pause Menu/Settings Menu" method="_on_fullscreen_toggled"]
+[connection signal="pressed" from="CanvasLayer/Pause Menu/Settings Menu/VBoxContainer/Close" to="CanvasLayer/Pause Menu/Settings Menu" method="_on_close_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pause Menu/How To Menu/Close" to="CanvasLayer/Pause Menu" method="_on_how_to_close_pressed"]

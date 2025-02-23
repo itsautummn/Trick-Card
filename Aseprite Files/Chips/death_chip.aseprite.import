@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://buqcdbg5o0mob"
+path="res://.godot/imported/death_chip.aseprite-925acca07d67b4a82d68d116cb9d8520.res"
+
+[deps]
+
+source_file="res://Aseprite Files/Chips/death_chip.aseprite"
+dest_files=["res://.godot/imported/death_chip.aseprite-925acca07d67b4a82d68d116cb9d8520.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false
